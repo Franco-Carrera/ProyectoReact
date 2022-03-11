@@ -5,13 +5,14 @@ const CrudTable = ({ data, setDataToEdit, deleteData }) => {
   return (
     <div>
       <h3>Tabla de Datos</h3>
-      <table>
+      <table width={"100%"}>
         <thead>
           <tr>
             <th>Nombre</th>
             <th>Fecha</th>
             <th>Distancia</th>
             <th>Tiempo y ganancia de Elevación</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 
 const initailForm = {
   name: "",
+  date: "",
+  distance: "",
+  time_and_elevation_gain: "",
   id: null,
 };
 
@@ -20,14 +23,18 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
-      [e.target.date]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!form.name || !form.constellation) {
+    if (
+      !form.name ||
+      !form.date ||
+      !form.distance ||
+      !form.time_and_elevation_gain
+    ) {
       alert("Datos incompletos");
       return;
     }
@@ -59,10 +66,24 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
         />
         <input
           type="text"
-          name="fecha"
+          name="date"
           placeholder="Fecha"
           onChange={handleChange}
           value={form.date}
+        />
+        <input
+          type="text"
+          name="distance"
+          placeholder="Distancia"
+          onChange={handleChange}
+          value={form.distance}
+        />
+        <input
+          type="text"
+          name="time_and_elevation_gain"
+          placeholder="Tiempo de elevación"
+          onChange={handleChange}
+          value={form.time_and_elevation_gain}
         />
         <input type="submit" value="Enviar" />
         <input type="reset" value="Limpiar" onClick={handleReset} />

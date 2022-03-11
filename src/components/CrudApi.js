@@ -23,7 +23,7 @@ const CrudApi = () => {
   const [loading, setLoading] = useState(false);
 
   let api = helpHttp();
-  let url = "http://localhost:5000/user";
+  let url = "http://localhost:5000/users";
 
   useEffect(() => {
     setLoading(true);

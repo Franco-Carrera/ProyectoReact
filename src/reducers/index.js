@@ -1,10 +1,9 @@
 import { combineReducers } from "redux";
 import { crudReducer } from "./crudReducer";
-import { shoppingReducer } from "./shoppingReducer";
 
 const reducer = combineReducers({
-  shopping: shoppingReducer,
   crud: crudReducer,
 });
 
 export default reducer;
+//saque cart y tira error line 90 crudReducer

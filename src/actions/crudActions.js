@@ -15,3 +15,7 @@ export const updateAction = (data) => ({ type: UPDATE_DATA, payload: data });
 export const deleteAction = (id) => ({ type: DELETE_DATA, payload: id });
 
 export const noAction = () => ({ type: NO_DATA });
+
+//Profe, como funcionaría si yo quiero leer un json hardcodeado, igual que db.json, puedo?
+
+//Y en vez de colocar santos, poner users?

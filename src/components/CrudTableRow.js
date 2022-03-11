@@ -1,6 +1,8 @@
 import React from "react";
+//import ActivityMonth from "./ActivityMonth";
+import "./CrudTableRow.css";
 
-const CrudTableRow = ({ el, setDataToEdit, deleteData }) => {
+const CrudTableRow = ({ el, data, setDataToEdit, deleteData }) => {
   let { name, date, distance, time_and_elevation_gain, id } = el;
 
   return (
