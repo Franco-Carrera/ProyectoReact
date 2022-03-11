@@ -5,7 +5,7 @@
       "name": "Seiya",
       "date": "03/03/2002",
       "distance": 100.5,
-      "time_and_elevation_gain": "764 hours"
+      "time_and_elevation_gain": "765 hours"
     },
     {
       "id": 2,
@@ -20,13 +20,6 @@
       "date": "17/08/2009",
       "distance": 100.5,
       "time_and_elevation_gain": "165 hours"
-    },
-    {
-      "id": 5,
-      "name": "Ikki",
-      "date": "02/01/1984",
-      "distance": 100.5,
-      "time_and_elevation_gain": "31 hours"
     },
     {
       "id": 6,

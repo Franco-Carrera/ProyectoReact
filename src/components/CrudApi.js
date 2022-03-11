@@ -112,8 +112,9 @@ const CrudApi = () => {
   };
 
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <h2>CRUD API</h2>
+      <h1>Redux</h1>
       <article className="grid-1-2">
         <CrudForm
           createData={createData}

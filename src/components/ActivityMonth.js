@@ -1,13 +1,25 @@
-// import React from "react";
+import React, { useEffect, useState } from "react";
 
-// const ActivityMonth = ({ el }) => {
-//    let { date } = el;
+const ActivityMonth = ({ el, data }) => {
+  //let { date, } = el.date;
 
-//   return (
-//     <div>
-//       <tr>{/* <td>{date}</td> */}</tr>
-//     </div>
-//   );
-// };
+  const [month, setMonth] = useState(true);
+  useEffect(() => {
+    if (month) setMonth(true);
+  }, [month]);
 
-// export default ActivityMonth;
+  return (
+    <>
+      {month && (
+        <article>
+          <h2 style={{ textAlign: "center" }}>Activity of Month</h2>
+          <aside>
+            <p>Date Generic</p>
+          </aside>
+        </article>
+      )}
+    </>
+  );
+};
+
+export default ActivityMonth;
