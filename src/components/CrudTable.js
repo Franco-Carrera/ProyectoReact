@@ -1,10 +1,10 @@
 import React from "react";
 import CrudTableRow from "./CrudTableRow";
 
-const CrudTable = ({ data, setDataToEdit, deleteData }) => {
+const CrudTable = ({ data, setDataToEdit, deleteData, readOneData }) => {
   return (
-    <div>
-      <h3>Tabla de Datos</h3>
+    <section>
+      <h3>Tabla de Datos de los últimos 3 meses</h3>
       <table width={"100%"}>
         <thead>
           <tr>
@@ -23,6 +23,7 @@ const CrudTable = ({ data, setDataToEdit, deleteData }) => {
                 el={el}
                 setDataToEdit={setDataToEdit}
                 deleteData={deleteData}
+                readOneData={readOneData}
               />
             ))
           ) : (
@@ -32,7 +33,7 @@ const CrudTable = ({ data, setDataToEdit, deleteData }) => {
           )}
         </tbody>
       </table>
-    </div>
+    </section>
   );
 };
 

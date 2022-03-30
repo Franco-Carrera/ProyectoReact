@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const initailForm = {
+const initialForm = {
   name: "",
   date: "",
   distance: "",
@@ -8,14 +8,20 @@ const initailForm = {
   id: null,
 };
 
-const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
-  const [form, setForm] = useState(initailForm);
+const CrudForm = ({
+  createData,
+  updateData,
+  dataToEdit,
+  setDataToEdit,
+  // readOneData,
+}) => {
+  const [form, setForm] = useState(initialForm);
 
   useEffect(() => {
     if (dataToEdit) {
       setForm(dataToEdit);
     } else {
-      setForm(initailForm);
+      setForm(initialForm);
     }
   }, [dataToEdit]);
 
@@ -31,7 +37,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
 
     if (
       !form.name ||
-      !form.date ||
+      !form.date || //
       !form.distance ||
       !form.time_and_elevation_gain
     ) {
@@ -43,13 +49,14 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
       createData(form);
     } else {
       updateData(form);
+      // readOneData(form);
     }
 
     handleReset();
   };
 
   const handleReset = (e) => {
-    setForm(initailForm);
+    setForm(initialForm);
     setDataToEdit(null);
   };
 

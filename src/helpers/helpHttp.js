@@ -55,3 +55,5 @@ export const helpHttp = () => {
     del,
   };
 };
+
+//PODEMOS IMPLEMENTAR CRUD EN ACTIVITIES TAMBIÉN, (SI ME PIDE FUNCIONES) //Cómo conecta con db?

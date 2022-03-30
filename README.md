@@ -1,9 +1,33 @@
 # Assignament React
 
-### For use this app, the first step is clone the project
+## Project configuration :electric_plug:
 
-### Get in cd/ react-training and ejecute the command npm install
+### 1. To use this application the first command is
 
-### Here, you write npm start
+```
+ git clone https://github.com/Franco-Carrera/ProyectoReact
+```
 
-### And the last instance, write npm run start fake-api
+### 2. The second step is to change to the root folder of the proyect:
+
+```
+ cd ./react-training
+```
+
+### 3. As a third step, the frontend dependencies of the project must be installed:
+
+```
+ npm install
+```
+
+### 4. Once here, we will run the api with json server with the command:
+
+```
+ npm run fake-api
+```
+
+### 5. Finally to start the application, you write:
+
+```
+ npm run start
+```

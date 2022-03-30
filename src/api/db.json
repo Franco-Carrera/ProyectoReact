@@ -1,67 +1,105 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Seiya",
-      "date": "03/03/2002",
-      "distance": 100.5,
-      "time_and_elevation_gain": "765 hours"
-    },
-    {
       "id": 2,
       "name": "Shiryu",
-      "date": "18/07/2013",
-      "distance": 100.5,
+      "date": "18/07/2022",
+      "distance": "400.5",
       "time_and_elevation_gain": "565 hours"
     },
     {
       "id": 4,
       "name": "Shun",
-      "date": "17/08/2009",
-      "distance": 100.5,
+      "date": "17/08/2022",
+      "distance": "900.5",
       "time_and_elevation_gain": "165 hours"
     },
     {
       "id": 6,
       "name": "Mú",
-      "date": "11/04/2002",
-      "distance": 100.5,
+      "date": "11/09/2002",
+      "distance": "3100.5",
       "time_and_elevation_gain": "15 hours"
     },
     {
-      "id": 7,
-      "name": "Saga",
-      "date": "10/01/2004",
-      "distance": 100.5,
-      "time_and_elevation_gain": "16 hours"
-    },
-    {
-      "name": "Kanón",
-      "date": "07/05/2014",
-      "distance": 100.5,
-      "time_and_elevation_gain": "29 hours",
-      "id": 1626132723014
-    },
-    {
       "name": "Shari",
-      "date": "12/12/2022",
-      "distance": "100.10",
+      "date": "12/08/2022",
+      "distance": "5500.10",
       "time_and_elevation_gain": "91 hours",
       "id": 1626133398548
     },
     {
-      "name": "Asmita",
-      "date": "22/12/2021",
-      "distance": 1120.5,
-      "time_and_elevation_gain": "12 hours",
-      "id": 1639705920657
+      "name": "Lionel Messi",
+      "date": "25/7/2022",
+      "distance": "6370m",
+      "time_and_elevation_gain": "62s",
+      "id": 1646990194126
     },
     {
-      "name": "Lionel Messi",
-      "date": "4/6",
-      "distance": "350m",
-      "time_and_elevation_gain": "60s",
-      "id": 1646990194126
+      "name": "Merchi",
+      "date": "31/09/2022",
+      "distance": "127m",
+      "time_and_elevation_gain": "3hs",
+      "id": 1648404627625
+    },
+    {
+      "name": "Biloni",
+      "date": "25/8/2022",
+      "distance": "5465m",
+      "time_and_elevation_gain": "89hours",
+      "id": 1648670130207
+    }
+  ],
+  "activities": [
+    {
+      "activitie": "running",
+      "id": 1,
+      "date": "18/09/2022",
+      "name": "Lap 1",
+      "distance": 25057,
+      "time_and_elevation_gain": "500 hours"
+    },
+    {
+      "activitie": "swimming",
+      "id": 2,
+      "date": "08/10/2022",
+      "name": "Swate 2",
+      "distance": 25087,
+      "time_and_elevation_gain": "500 hours"
+    },
+    {
+      "activitie": "football",
+      "id": 3,
+      "date": "7/11/2022",
+      "name": "Footb 3",
+      "distance": 28099,
+      "time_and_elevation_gain": "520 hours"
+    }
+  ],
+  "activitiesMonth": [
+    {
+      "activitie": "rugby",
+      "id": 1,
+      "date": "20/09/2022",
+      "name": "rug 1",
+      "distance": 15055,
+      "time_and_elevation_gain": "400 hours"
+    },
+    {
+      "activitie": "tennis",
+      "id": 2,
+      "date": "22/10/2022",
+      "name": "ten 2",
+      "distance": 16087,
+      "time_and_elevation_gain": "400 hours"
+    },
+    {
+      "activitie": "football",
+      "id": 3,
+      "date": "23/11/2022",
+      "name": "Footb 3",
+      "distance": 16099,
+      "time_and_elevation_gain": "450 hours"
     }
   ]
 }

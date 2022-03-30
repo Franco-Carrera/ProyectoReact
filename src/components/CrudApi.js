@@ -5,6 +5,7 @@ import {
   deleteAction,
   noAction,
   readAllAction,
+  readDate,
   updateAction,
 } from "../actions/crudActions";
 import { helpHttp } from "../helpers/helpHttp";
@@ -23,12 +24,13 @@ const CrudApi = () => {
   const [loading, setLoading] = useState(false);
 
   let api = helpHttp();
-  let url = "http://localhost:5000/users";
+  let urlUsers = "http://localhost:5000/users";
 
   useEffect(() => {
     setLoading(true);
+
     helpHttp()
-      .get(url)
+      .get(urlUsers)
       .then((res) => {
         //console.log(res);
         if (!res.err) {
@@ -42,7 +44,7 @@ const CrudApi = () => {
         }
         setLoading(false);
       });
-  }, [url, dispatch]);
+  }, [urlUsers, dispatch]);
 
   const createData = (data) => {
     data.id = Date.now();
@@ -53,7 +55,7 @@ const CrudApi = () => {
       headers: { "content-type": "application/json" },
     };
 
-    api.post(url, options).then((res) => {
+    api.post(urlUsers, options).then((res) => {
       //console.log(res);
       if (!res.err) {
         //setDb([...db, res]);
@@ -65,8 +67,7 @@ const CrudApi = () => {
   };
 
   const updateData = (data) => {
-    let endpoint = `${url}/${data.id}`;
-    //console.log(endpoint);
+    let endpoint = `${urlUsers}/${data.id}`;
 
     let options = {
       body: data,
@@ -85,19 +86,40 @@ const CrudApi = () => {
     });
   };
 
+  const readOneData = (data) => {
+    let endpoint = `${urlUsers}/${data}`;
+    console.log(endpoint);
+    //como sacar undefined pensar //CrudTableForm //date
+
+    let options = {
+      body: data,
+      headers: { "content-type": "application/json" },
+    };
+
+    api.get(endpoint, options).then((res) => {
+      // console.log(res); // (error):failed to ejecute fetch on Window
+      console.log(options);
+      if (!res.err) {
+        dispatch(readDate(res));
+      } else {
+        setError(res);
+      }
+    });
+  };
+
   const deleteData = (id) => {
     let isDelete = window.confirm(
       `¿Estás seguro de eliminar el registro con el id '${id}'?`
     );
 
     if (isDelete) {
-      let endpoint = `${url}/${id}`;
+      let endpoint = `${urlUsers}/${id}`;
       let options = {
         headers: { "content-type": "application/json" },
       };
 
       api.del(endpoint, options).then((res) => {
-        //console.log(res);
+        console.log(res);
         if (!res.err) {
           //let newData = db.filter((el) => el.id !== id);
           //setDb(newData);
@@ -112,15 +134,16 @@ const CrudApi = () => {
   };
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div className="App" style={{ textAlign: "center" }}>
+      <h1>Estadísticas de actividades</h1>
       <h2>CRUD API</h2>
-      <h1>Redux</h1>
       <article className="grid-1-2">
         <CrudForm
           createData={createData}
           updateData={updateData}
           dataToEdit={dataToEdit}
           setDataToEdit={setDataToEdit}
+          // readOneData={readOneData}
         />
         {loading && <Loader />}
         {error && (
@@ -134,6 +157,7 @@ const CrudApi = () => {
             data={db}
             setDataToEdit={setDataToEdit}
             deleteData={deleteData}
+            readOneData={readOneData}
           />
         )}
       </article>
